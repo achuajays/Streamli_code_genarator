@@ -4,9 +4,9 @@ from smolagents import CodeAgent, HfApiModel
 from gitpush_code_tool import GitPushCodeTool
 from file_reader_tool import FileReaderTool
 from code_file_tool import CodeFileTool
-
+from cors_config import add_cors
 app = FastAPI()
-
+add_cors(app)
 # Define the request model
 class TaskRequest(BaseModel):
     github_username: str
